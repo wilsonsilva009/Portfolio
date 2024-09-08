@@ -1,0 +1,40 @@
+footer{
+	margin-top: 5%;
+	height: 10rem;
+	width: 100%;
+	background-color: #333;
+	color: white;
+}
+
+.footer-content{
+	display: flex;
+	height: 100%;
+	width: 100%;
+	gap: 2rem;
+}
+
+.footer-copy{
+	flex: 2;
+	margin: 1.5%;
+}
+
+.footer-social{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: right;
+	align-content: end;
+	flex-wrap: wrap;
+	margin-right: 5%;
+}
+
+.footer-social h2{
+	text-align: right;
+}
+
+.social-list{
+	display: flex;
+	justify-content: end;
+	justify-items: center;
+	gap: 5%;
+}

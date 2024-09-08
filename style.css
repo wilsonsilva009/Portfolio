@@ -1,0 +1,552 @@
+/*----------------------- DEFAULT -----------------------*/
+html{
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	font-family: Comic-sans, Arial, Calibri, sans-serif;
+	transition: background-color 0.5s ease;
+	background-color: #444;
+}
+
+p, h1{
+	margin: 1.1rem 0;
+}
+
+/*----------------------- Header -----------------------*/
+
+header {
+	position: fixed;
+	z-index: 1;
+	width: 20%;
+	height: 5rem;
+	right: 2.5%;
+}
+
+/*Conteúdo do header*/
+.header-content {
+	display: flex;
+	height: 100%;
+	width: 100%;
+}
+
+/*Titulo do header*/
+.header-title {
+	margin-top: 20vh;
+	margin-left: 10vh;
+	width: max-content;
+	height: max-content;
+}
+
+/*Parte espeçifica do titulo header*/
+.header-title *:not(span, div) {
+	margin: 1rem 0 1rem 1rem;
+	color: white;
+}
+
+/*Menus do header*/
+.header-menus {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin-right: 3%;
+	align-items: center;
+	width: 100%;
+	gap: 2.5rem;
+}
+
+/*Butões do header*/
+.menus a{
+	margin: 20px;
+	font-size: 20px;
+	color: white;
+}
+
+/*Header abaixo do hader principal*/
+.subheader{
+	background-image: url(Images/subheaderbackground.jpg);
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100vh;
+}
+
+/*Butão para fazer scroll para baixo*/
+.scroll-down{
+	margin: auto;
+	background-color: #777;
+	width: 4.5rem;
+	height: 4.5rem;
+	border-radius: 50px;
+	box-shadow: 3.5px 2px #333;
+	animation: bounceidle 1s infinite alternate;
+}
+
+/*Animação para fazer o botão saltar*/
+@keyframes bounceidle {
+	0% {
+		transform: translateY(0);
+		opacity: 0.5;
+	}
+	100% {
+		transform: translateY(10px);
+		opacity: 1;
+	}
+}
+
+/*Butão para fazer download do CV*/
+.cvdownload-fixed{
+	position: fixed;
+	width: 100%;
+	display: flex;
+	bottom: 5%;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	z-index: 1;
+}
+
+/*Butão de contacto*/
+#contactbutton{
+	font-weight: bold;
+	font-size: 1rem;
+	border-radius: 25px;
+	padding: 0.5rem;
+	background: linear-gradient(to top, #1b1c1d, black);
+	border: 0;
+	color: white;
+	width: 150px;
+	height: 30px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+/*Imagem do butão de contacto*/
+#contactbutton img{
+	animation: phone-anim 2.5s ease infinite;
+}
+
+/*Animação da imagem do butão de contacto*/
+@keyframes phone-anim{
+	10%{
+		transform: rotate(0deg);
+	}
+	
+	20%{
+		transform: rotate(30deg);
+	}
+	
+	30%{
+		transform: rotate(0deg);
+	}
+	
+	40%{
+		transform: rotate(30deg);
+	}
+	
+	50%{
+		transform: rotate(0deg);
+	}
+}
+
+/*Butão para fazer download do butão*/
+#cvdownload{
+	font-weight: bold;
+	font-size: 2rem;
+	border-radius: 25px;
+	padding: 0.5rem;
+	background: linear-gradient(to top, #1b1c1d, transparent);
+	border: 0;
+	color: white;
+	width: 250px;
+	box-shadow: -2px 4px #161617;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	z-index: 1;
+	animation: bounceidle 2s infinite alternate;
+}
+
+/*Imagem do butão de download do CV*/
+#cvdownload img{
+	width: 30px;
+	margin: 0;
+}
+
+/*----------------------- Conteúdo do website -----------------------*/
+.site-content{
+	display: flex;
+	flex-direction: column;
+	margin: 3rem 7rem 0 7rem;
+}
+
+/*Alterar os vários estágios da página*/
+.stage0, .stage1, .stage2, .stage3{
+	transition: transform 1s ease, opacity 1s ease;
+	color: white;
+	opacity: 0;
+}
+
+.menus{
+	transition: opacity .3s ease;
+}
+
+h1{
+	font-size: clamp(25px,5vw,50px);
+}
+
+/*Os efeitos de luz no fundo*/
+.color-effect{
+	height: 100px;
+	position: absolute;
+	right: 100%;
+	box-shadow: 0 0 200px 50px rgba(255, 111, 0, 0.7);
+	z-index: -1;
+}
+
+/*Efeitos de luz no fundo alinhados à direita*/
+.color-effect-right{
+	height: 100px;
+	position: absolute;
+	left: 100%;
+	box-shadow: 0 0 200px 50px rgba(255, 111, 0, 0.7);
+	z-index: -1;
+}
+
+/*Texto de gradiente para condizer com as luzes de fundo*/
+.gradient-text{
+	font-weight: bolder;
+	background: linear-gradient(to right, #f99344, #fb6c4a);
+	/*-webkit-background-clip: text;*/
+	background-clip: text;
+	color: transparent;
+}
+
+span{
+	position: relative;
+}
+
+span::before{
+	content: '';
+	position: absolute;
+	/*width: 100%;*/
+	left: 0;
+	top: 95%;
+	height: 5px;
+	background: linear-gradient(to right, #f99344, #fb6c4a);
+	border-radius: 25px;
+	transition: width 1s ease;
+}
+
+.info-box{
+	margin: 5rem 0 40rem 0;
+}
+
+.info-box:not(.stage1, .stage5){
+	padding-top: 10rem;
+}
+
+.stage1,.stage5{
+	padding-top: 5rem;
+}
+
+.info-box > div, .info-box > p, .info-box > img, .space-right > p{
+	margin-left: 3%;
+	margin-right: 3%;
+	font-size: 20px;
+}
+
+.space-right{
+	display: flex;
+	flex-direction: column;
+	justify-content: right;
+	align-content: end;
+	flex-wrap: wrap;
+	text-align: right;
+}
+
+.habilidades{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	column-gap: 7rem;
+}
+
+.habilidades-caroussel{
+	margin: 5rem 0 40rem 0;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+
+	color: white;
+	transition: transform 1s ease, opacity 1s ease;
+	
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icons-holder{
+	width: 50%;
+    min-height: 80px;
+    overflow: hidden;
+}
+
+.icons{
+	display: flex;
+
+	gap: 1rem;
+	width: fit-content;
+
+	animation: moveCarousel 20s linear infinite;
+}
+
+.icons:hover{
+	animation-play-state: paused;
+}
+
+@keyframes moveCarousel {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(-1001px);
+    }
+}
+
+@keyframes moveIconDesc{
+	0%{
+		transform: translateY(0px);
+		opacity: 0;
+	}
+
+	100%{
+		transform: translateY(50px);
+		opacity: 1;
+	}
+}
+
+
+.icon-desc{
+	width: 40%;
+	height: 40em;
+	margin-top: 1rem;
+	opacity: 0;
+}
+
+.icon-thumbnail{
+	width: 60%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.icon-thumbnail h1{
+	margin: 0;
+	position: absolute;
+	bottom: 5%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.icon-desc p{
+	text-align: justify;
+}
+
+.habilidades-graph .progress-bar-bg{
+	margin: 10px 30% 8px 30px;
+}
+
+.progress-bar-bg{
+	display: flex;
+	width: 20rem;
+	height: 10px;
+	background-color: #111;
+	border-radius: 25px;
+	box-shadow: -1px 3px #000;
+}
+
+.progress-bar{
+	height: 100%;
+	background-color: #FFF;
+	border-radius: 25px;
+	width: 10%;
+	transition: width 3s ease, background-color 3s ease;
+}
+
+.projetos{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	gap: 5%;
+}
+
+.projetos-item{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.projetos-item button{
+	width: 8rem;
+	font-size: 1.5rem;
+	background-color: #222;
+	color: white;
+	border-radius: 50px;
+	margin-top: 2rem;
+	position: relative;
+}
+
+.projetos-item button::before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 90%;
+	background: linear-gradient(to right, black 30%, orange , black 70%);
+	z-index: -1;
+	border-radius: 25px;
+	padding: 5px;
+	top: -3.4px;
+	left: -5px;
+}
+
+.projetos-item button:hover::before{
+	background: linear-gradient(to right, black 10%, orange , black 90%);
+}
+
+.projetos-item h2{
+	text-align: center;
+	font-size: 25px;
+}
+
+.projetos-item p{
+	text-align: center;
+	font-size: 18px;
+}
+
+.projetos-item img{
+	width: 35%;
+}
+
+/*Animation for the light of the sun*/
+#sun-glow{
+	height: 100px; 
+	position: absolute; 
+	left: 50%; 
+	bottom: -8%; 
+	box-shadow: 0px 0px 1000px 400px #FFBC00; 
+	z-index: -1;
+	animation: sun-glow-anim 5s ease-in-out infinite;
+}
+
+@keyframes sun-glow-anim {
+	0%{
+		box-shadow: 0px 0px 1000px 400px #FFBC00; 
+	}
+
+	30%{
+		box-shadow: 0px 0px 1000px 420px #FFBC00; 
+	}
+
+	50%{
+		box-shadow: 0px 0px 1000px 400px #FFBC00; 
+	}
+
+	70%{
+		box-shadow: 0px 0px 1000px 420px #FFBC00;
+	}
+
+	100%{
+		box-shadow: 0px 0px 1000px 400px #FFBC00; 
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.info-box{
+		flex-direction: column;
+		align-content: center;
+		flex-wrap: wrap;
+	}
+	
+	.projetos {
+		grid-template-columns: 1fr;
+	}
+	
+	.space-right{
+		text-align: center;
+	}
+	
+	.site-content{
+		margin: 1.5rem 3.5rem 0 3.5rem;
+		text-align: center;
+	}
+	
+	.header-title{
+		margin: auto;
+	}
+	
+	.menus{
+		display: flex;
+		justify-content: space-evenly;
+	}
+	
+	.menus a{
+		margin: 10px;
+		font-size: 0.7rem;
+	}
+	
+	.gradient-text{
+		display: block;
+	}
+	
+	.habilidades-graph .progress-bar-bg{
+		margin: 10px auto 8px auto;
+	}
+
+	.icons-holder{
+		width: 110%;
+	}
+
+	.icon-desc{
+		width: 100%;
+	}
+}
+
+/*          TESTE              */
+body {
+	background-image: url(Images/stars.png);
+	animation: snowy 30s linear infinite both;
+	position: relative;	
+}
+
+#sun{
+	width: 80%;
+	height: 15rem;
+
+	position: absolute;
+	z-index: -1;
+	border-radius: 100%;
+
+	bottom: 0%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@keyframes snowy{
+  0% {
+	background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+  50% {
+	background-position: 300px 600px, 275px 600px, -5px 150px;
+  }
+  100% {
+	background-position: 600px 1200px, 400px 800px, 0px 300px;
+  }
+}
+
+
+/*90% {background-position: 500px 1000px, 400px 800px, 0px 300px;}*/

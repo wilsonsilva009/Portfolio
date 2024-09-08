@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contacte-me</title>
+	<link rel="stylesheet" href="footer.css"> <!--Criar link ao código CSS do footer-->
+	
+	<style>
+	
+	
+		/*----------------------- DEFAULT -----------------------*/
+		
+		
+		html{
+			scroll-behavior: smooth;
+		}
+		
+		body {
+			background-image: url(Images/stars.png);
+			animation: snowy 30s linear infinite both;
+			
+			overflow-x: hidden; /*Impedir que scroll para fora seja impossível*/
+			margin: 0;
+			font-family: Comic-sans, Arial, Calibri, sans-serif;
+			transition: background-color 0.5s ease; /*transition: propriedade tempo estilo*/
+			background-color: #12141a;
+		}
+
+		/*Animação para o fundo do website
+		- Esta animação simplesmente altera o X e Y da imágem ao longo do tempo
+		*/
+		@keyframes snowy{
+		  0% {
+			background-position: 0px 0px, 0px 0px, 0px 0px;
+		  }
+		  50% {
+			background-position: 300px 600px, 275px 600px, -5px 150px;
+		  }
+		  100% {
+			background-position: 600px 1200px, 400px 800px, 0px 300px;
+		  }
+		}
+		
+		/*Aplicar estilos gerais aos tipos de texto*/
+		p, h1, h2, h3{
+			margin: 1.5rem 0;
+			color: white;
+		}
+		
+		h1{
+			font-size: 4rem;
+		}
+		
+		/*----------------------- Efeitos de Fundo -----------------------*/
+
+		/*O brilho amarelo no fundo*/
+		.color-effect{
+			height: 10px;
+			position: absolute;
+			right: 50%;
+			box-shadow: 0 0 500px 80px rgba(255, 255, 0, 0.7);
+			z-index: -1;
+		}
+		
+		/*A estrela cadente*/
+		.shooting-star{
+			width: 10px;
+			height: 10px;
+			position: absolute;
+			/*right: 85%;
+			top: 50%;*/
+			box-shadow: 0px 0px 11px 4px rgb(255 255 255 / 1); /*sombra: offset x e y, spread e reach + cor*/
+			background-color: rgba(255, 255, 255, 0.7);
+			border-radius: 50px;
+			z-index: -1;
+			animation: shooting-star-anim 15s ease-in-out infinite; /*animação: nom tempo estilo repetições*/
+		}
+		
+		/*Animação da estrela cadente no fundo*/
+		@keyframes shooting-star-anim{
+			0%{
+				transform: translate(-10vw, 20vh);
+			}
+			
+			20%{
+				box-shadow: 0px 0px 11px 4px rgb(255 255 255 / 1);
+			}
+			
+			50%{
+				box-shadow: 0px 0px 20px 9px rgb(255 255 255 / 1);
+			}
+			
+			60%{
+				box-shadow: 0px 0px 20px 9px rgb(255 255 255 / 1);
+			}
+			
+			80%{
+				box-shadow: 0px 0px 11px 4px rgb(255 255 255 / 1);
+			}
+			
+			100%{
+				transform: translate(110vw, 85vh);
+			}
+		}
+		
+		/*----------------------- Conteudo do Site -----------------------*/
+		
+		.site-content{
+			display:flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			margin: 1.5rem 2rem;
+		}
+		
+		/*----------------------- Form de Contacto -----------------------*/
+		
+		.contact-form{
+			position: relative;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			gap: 2rem;
+			padding: 2rem;
+			border: 2px groove white;
+			border-radius: 25px;
+			box-shadow: 10px 10px rgba(0,0,0,0.5);
+		}
+		
+		/*O pin decorativo*/
+		#pin{
+			position: absolute;
+			top: 2%;
+			right: 1%;
+			width: 4rem;
+		}
+		
+		/*As caixas de inserir dados*/
+		.input-field{
+			font-size: 1.5rem;
+			display: flex;
+			flex-direction: column;
+			gap: 0.3rem;
+			color: white;
+			width: 75%;
+		}
+		
+		/*Os butões para inserir dados*/
+		.input-field input, .input-field textarea{
+			border-radius: 25px;
+			padding: 10px;
+			background-color: transparent;
+			border: 2px solid white;
+			width: 100%;
+			box-sizing: border-box;
+			color: white;
+			font-weight: bolder;
+			box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+			overflow: hidden;
+		}
+		
+		/*O butão para submeter*/
+		.submit-button input{
+			color: white;
+			font-size: 1rem;
+			border-radius: 50px;
+			box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+			background-color: #111;
+			padding: 10px;
+		}
+		
+		/*Texto predefinição*/
+		::placeholder{
+			opacity: 1;
+			font-size: 0.9rem;
+		}
+		
+		/*----------------------- Email, Telefone, Etc. -----------------------*/
+		
+		/*Conteudo de informações extra*/
+		.more-info{
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			
+			width: 90%;
+			margin-top: 7.5rem;
+			padding: 2rem;
+			border: 2px groove white;
+			border-radius: 25px;
+			box-shadow: 15px 15px rgba(0,0,0,0.5);
+			word-wrap: break-word;
+		}
+		
+		/*Título das infromações extra*/
+		.more-info h2{
+			margin: 0 0 2rem 0;
+		}
+		
+		/*Parágrafo das infromações extra*/
+		.more-info p{
+			margin: 1rem 0 1rem 3rem;
+			font-size: 1rem;
+		}
+		
+		
+	</style>
+	
+	
+</head>
+
+
+<body>
+
+	<!--Adicionar estrela cadente e brilho de fundo-->
+	<div class="color-effect"></div>
+	<div class="shooting-star"></div>
+	
+	<!--Conteudo do site-->
+	<section class="site-content">
+		<h1 style="margin-bottom: 0;">Olá 👋</h1>
+		<h2 style="margin-bottom: 3rem;">É um prazer conhece-lo</h2>
+		
+		<!--Formulário de contacto-->
+		<form class="contact-form">
+			<img id="pin" src="Images/pin.png" alt="Pin">
+		
+			<div class="input-field">
+				<label>Nome</label><input type="text" label="Inserir Nome" placeholder=" Pedro">
+			</div>
+			
+			<div class="input-field">
+				<label>Email</label><input type="text" label="Inserir Email" placeholder=" Pedro@gmail.com">
+			</div>
+			
+			<div style="width: 100%;" class="input-field">
+				<label>Mensagem</label><textarea style="resize: none;" placeholder=" Olá! Gostava de entrar em contacto..." rows="10" cols="50"></textarea>
+			</div>
+			
+			<div class="submit-button">
+				<input type="submit" label="Submeter" value="Enviar Mensagem">
+			</div>
+			
+		</form>
+		
+		<!--Mais informação sobre mim-->
+		<section class="more-info">
+			<img id="pin" src="Images/pin.png" alt="Pin">
+			
+		
+			<h2>Alternativamente...</h2>
+			
+			<p>wilsonfernando009@gmail.com</p>
+			<p>Telefone no CV</p>
+			
+			<h3>Disponibilidade</h3>
+			
+			<p><b style="font-size: 1.2rem;">Dias úteis:</b> 17:30 - 23:00</p>
+			<p><b style="font-size: 1.2rem;">Fins-de-semana:</b> 08:00 - 23:00</p>
+			
+		</section>
+		
+	</section>
+    
+	<!--Footer do Site-->
+	<footer>
+		<!--Conteúdo do footer-->
+		<div class="footer-content">
+			<!--Copyright-->
+			<div class="footer-copy">
+				<h2>Wilson</h2>
+				<p>Wilson &copy; Todos os direitos reservados.</p>
+			</div>
+			<!--Redes Sociais-->
+			<div class="footer-social">
+				<h2>Mais de mim</h2>
+				<div class="social-list">
+					<img src="Images/instagram.png" width="50px">
+					<img src="Images/linkedin.png" width="50px">
+					<img src="Images/github.png" width="50px">
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+</body>
+
+
+</html>
