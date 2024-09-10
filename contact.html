@@ -225,19 +225,19 @@
 		<h2 style="margin-bottom: 3rem;">É um prazer conhece-lo</h2>
 		
 		<!--Formulário de contacto-->
-		<form class="contact-form">
+		<form class="contact-form" action="https://formspree.io/f/xyzgvqlw" method="POST">
 			<img id="pin" src="Images/pin.png" alt="Pin">
 		
 			<div class="input-field">
-				<label>Nome</label><input type="text" label="Inserir Nome" placeholder=" Pedro">
+				<label>Nome</label><input name="Nome" type="text" label="Inserir Nome" placeholder=" Pedro" required>
 			</div>
 			
 			<div class="input-field">
-				<label>Email</label><input type="text" label="Inserir Email" placeholder=" Pedro@gmail.com">
+				<label>Email</label><input name="Email" type="email" label="Inserir Email" placeholder=" Pedro@gmail.com" required>
 			</div>
 			
 			<div style="width: 100%;" class="input-field">
-				<label>Mensagem</label><textarea style="resize: none;" placeholder=" Olá! Gostava de entrar em contacto..." rows="10" cols="50"></textarea>
+				<label>Mensagem</label><textarea name="Message" style="resize: none;" placeholder=" Olá! Gostava de entrar em contacto..." rows="10" cols="50" required></textarea>
 			</div>
 			
 			<div class="submit-button">
