@@ -10,7 +10,7 @@ body {
 	margin: 0;
 	font-family: Comic-sans, Arial, Calibri, sans-serif;
 	transition: background-color 0.5s ease;
-	background-color: #444;
+	background-color: #6E6E6E;
 	overflow-x: hidden;
 	animation: snowy 30s linear infinite both;
 }
@@ -611,6 +611,10 @@ span::before{
 	#sun{
 		width: 100% !important;
         height: 13rem !important;
+	}
+
+	#sun-glow{
+		bottom: -4%;
 	}
 }
 

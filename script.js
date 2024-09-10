@@ -19,8 +19,8 @@ window.addEventListener('scroll', function() {
 	];
 	
 	const colors = [
-		{ percent: 1, color: '#444', target: '.stage3' },
-		{ percent: 15, color: '#444', target: '.stage3' },
+		{ percent: 1, color: '#6E6E6E', target: '.stage3' },
+		{ percent: 15, color: '#6E6E6E', target: '.stage3' },
 		{ percent: 45, color: '#333', target: '.stage1' },
 		{ percent: 80, color: '#222', target: '.stage2' },
 		{ percent: 101, color: '#111', target: '.stage3' },
