@@ -449,7 +449,7 @@ span::before{
 	width: 35%;
 }
 
-/*Animation for the light of the sun and rocket*/
+/*Animation for the light of the sun and rocket and ufo*/
 #asteroid1, #asteroid2, #asteroid3{
 	position: absolute;
 	bottom: 53vh;
@@ -482,6 +482,82 @@ span::before{
 	}
 }
 
+#ufo-bg{
+	position: absolute;
+	left: -25vw;
+	transform: translateY(-70%);
+	z-index: -1;
+	animation: ufo-anim 10s ease-in-out infinite backwards;
+}
+
+#ufo-bg img{
+	position: absolute;
+}
+
+#ufolight{
+	z-index: 1;
+	bottom: -400px;
+	filter: drop-shadow(0px 0px 30px #00A2E8);
+
+	animation: ufo-light-anim 2s linear infinite;
+}
+
+#ufo{
+	z-index: 2;
+	top: 0;
+	filter: drop-shadow(0px 0px 10px orange);
+}
+
+
+@keyframes ufo-anim {
+	0%{
+		left: -25vw;
+		transform: translateY(-70%);
+	}
+
+	12%{
+		left: 35vw;
+		transform: translateY(-5%) rotateZ(-35deg);
+	}
+
+	20%{
+		left: 30vw;
+		transform: translateY(-5%) rotateZ(25deg);
+	}
+
+	35%{
+		left: 125vw;
+		transform: translateY(70%);
+	}
+
+	100%{
+		left: 125vw;
+		transform: translateY(70%);
+	}
+}
+
+@keyframes ufo-light-anim {
+	0%{
+		opacity: 1;
+	}
+
+	25%{
+		opacity: 0;
+	}
+
+	50%{
+		opacity: 1;
+	}
+
+	75%{
+		opacity: 0;
+	}
+
+	100%{
+		opacity: 1;
+	}
+	
+}
 
 #rocket{
 	position: absolute;
@@ -509,6 +585,29 @@ span::before{
 		bottom: 11vh;
     	left: 109vw;
 		transform: rotate(110deg);
+	}
+}
+
+#rocket-glow{
+	position: absolute; 
+	left: 25%; 
+	bottom: 30%; 
+	box-shadow: 0px 0px 15px 20px #ff6a00; 
+	z-index: -1;
+	animation: rocket-glow-anim 3s ease-in-out infinite;
+}
+
+@keyframes rocket-glow-anim {
+	0%{
+		box-shadow: 0px 0px 15px 20px #ff6a00;
+	}
+
+	50%{
+		box-shadow: 0px 0px 45px 25px #ff6a00;
+	}
+
+	100%{
+		box-shadow: 0px 0px 15px 20px #ff6a00;
 	}
 }
 
@@ -614,7 +713,7 @@ span::before{
 	}
 
 	#sun-glow{
-		bottom: -4%;
+		bottom: -7%;
 	}
 }
 
