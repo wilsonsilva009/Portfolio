@@ -1,18 +1,35 @@
 /*----------------------- DEFAULT -----------------------*/
 html{
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 body {
+	background-image: url(Images/stars.png);
+	position: relative;	
 	margin: 0;
 	font-family: Comic-sans, Arial, Calibri, sans-serif;
 	transition: background-color 0.5s ease;
 	background-color: #444;
+	overflow-x: hidden;
+	animation: snowy 30s linear infinite both;
 }
 
 p, h1{
 	margin: 1.1rem 0;
 }
+
+@keyframes snowy{
+	0% {
+	  background-position: 0px 0px, 0px 0px, 0px 0px;
+	}
+	50% {
+	  background-position: 300px 600px, 275px 600px, -5px 150px;
+	}
+	100% {
+	  background-position: 600px 1200px, 400px 800px, 0px 300px;
+	}
+  }
 
 /*----------------------- Header -----------------------*/
 
@@ -432,7 +449,70 @@ span::before{
 	width: 35%;
 }
 
-/*Animation for the light of the sun*/
+/*Animation for the light of the sun and rocket*/
+#asteroid1, #asteroid2, #asteroid3{
+	position: absolute;
+	bottom: 53vh;
+    left: 45vw;
+	z-index: -1;
+	animation: asteroid-anim 1s ease infinite alternate;
+}
+
+#asteroid2{
+	bottom: 41vh;
+    left: 82vw;
+    width: 50px;
+	animation-delay: 0.7s;
+}
+
+#asteroid3{
+	bottom: 33vh;
+    left: 8vw;
+    width: 60px;
+	animation-delay: 0.25s;
+}
+
+@keyframes asteroid-anim {
+	0%{
+		transform: translateY(0px) rotate(0deg);
+	}
+
+	100%{
+		transform: translateY(10px) rotate(15deg);
+	}
+}
+
+
+#rocket{
+	position: absolute;
+    bottom: 11vh;
+    left: -9vw;
+
+    z-index: -2;	
+	animation: rocket-anim 10s linear forwards infinite;
+}
+
+@keyframes rocket-anim{
+	0%{
+		bottom: 11vh;
+    	left: -9vw;
+		transform: rotate(0deg);
+	}
+
+	50%{
+		bottom: 45vh;
+    	left: 45vw;
+		transform: rotate(45deg);
+	}
+
+	100%{
+		bottom: 11vh;
+    	left: 109vw;
+		transform: rotate(110deg);
+	}
+}
+
+
 #sun-glow{
 	height: 100px; 
 	position: absolute; 
@@ -441,6 +521,19 @@ span::before{
 	box-shadow: 0px 0px 1000px 400px #FFBC00; 
 	z-index: -1;
 	animation: sun-glow-anim 5s ease-in-out infinite;
+}
+
+#sun{
+	width: 80%;
+	height: 15rem;
+
+	position: absolute;
+	z-index: -1;
+	border-radius: 100%;
+
+	bottom: 0%;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 @keyframes sun-glow-anim {
@@ -514,39 +607,11 @@ span::before{
 	.icon-desc{
 		width: 100%;
 	}
-}
 
-/*          TESTE              */
-body {
-	background-image: url(Images/stars.png);
-	animation: snowy 30s linear infinite both;
-	position: relative;	
-}
-
-#sun{
-	width: 80%;
-	height: 15rem;
-
-	position: absolute;
-	z-index: -1;
-	border-radius: 100%;
-
-	bottom: 0%;
-	left: 50%;
-	transform: translateX(-50%);
-}
-
-@keyframes snowy{
-  0% {
-	background-position: 0px 0px, 0px 0px, 0px 0px;
-  }
-  50% {
-	background-position: 300px 600px, 275px 600px, -5px 150px;
-  }
-  100% {
-	background-position: 600px 1200px, 400px 800px, 0px 300px;
-  }
+	#sun{
+		width: 100% !important;
+        height: 13rem !important;
+	}
 }
 
 
-/*90% {background-position: 500px 1000px, 400px 800px, 0px 300px;}*/
