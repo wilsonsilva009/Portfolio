@@ -713,7 +713,30 @@ span::before{
 	}
 
 	#sun-glow{
-		bottom: -7%;
+		bottom: -1%;
+		box-shadow: 0px 0px 1000px 100px #FFBC00;
+	}
+
+	@keyframes sun-glow-anim {
+		0%{
+			box-shadow: 0px 0px 1000px 100px #FFBC00;
+		}
+	
+		30%{
+			box-shadow: 0px 0px 1000px 120px #FFBC00;
+		}
+	
+		50%{
+			box-shadow: 0px 0px 1000px 100px #FFBC00;
+		}
+	
+		70%{
+			box-shadow: 0px 0px 1000px 120px #FFBC00;
+		}
+	
+		100%{
+			box-shadow: 0px 0px 1000px 100px #FFBC00;
+		}
 	}
 }
 

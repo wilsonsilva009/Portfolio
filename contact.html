@@ -19,29 +19,11 @@
 		}
 		
 		body {
-			background-image: url(Images/stars.png);
-			animation: snowy 30s linear infinite both;
-			
 			overflow-x: hidden; /*Impedir que scroll para fora seja impossível*/
 			margin: 0;
 			font-family: Comic-sans, Arial, Calibri, sans-serif;
 			transition: background-color 0.5s ease; /*transition: propriedade tempo estilo*/
-			background-color: #12141a;
-		}
-
-		/*Animação para o fundo do website
-		- Esta animação simplesmente altera o X e Y da imágem ao longo do tempo
-		*/
-		@keyframes snowy{
-		  0% {
-			background-position: 0px 0px, 0px 0px, 0px 0px;
-		  }
-		  50% {
-			background-position: 300px 600px, 275px 600px, -5px 150px;
-		  }
-		  100% {
-			background-position: 600px 1200px, 400px 800px, 0px 300px;
-		  }
+			background: linear-gradient(45deg, black, #08080a)
 		}
 		
 		/*Aplicar estilos gerais aos tipos de texto*/
@@ -65,46 +47,6 @@
 			z-index: -1;
 		}
 		
-		/*A estrela cadente*/
-		.shooting-star{
-			width: 10px;
-			height: 10px;
-			position: absolute;
-			/*right: 85%;
-			top: 50%;*/
-			box-shadow: 0px 0px 11px 4px rgb(255 255 255 / 1); /*sombra: offset x e y, spread e reach + cor*/
-			background-color: rgba(255, 255, 255, 0.7);
-			border-radius: 50px;
-			z-index: -1;
-			animation: shooting-star-anim 15s ease-in-out infinite; /*animação: nom tempo estilo repetições*/
-		}
-		
-		/*Animação da estrela cadente no fundo*/
-		@keyframes shooting-star-anim{
-			0%{
-				transform: translate(-10vw, 20vh);
-			}
-			
-			20%{
-				box-shadow: 0px 0px 11px 4px rgb(255 255 255 / 1);
-			}
-			
-			50%{
-				box-shadow: 0px 0px 20px 9px rgb(255 255 255 / 1);
-			}
-			
-			60%{
-				box-shadow: 0px 0px 20px 9px rgb(255 255 255 / 1);
-			}
-			
-			80%{
-				box-shadow: 0px 0px 11px 4px rgb(255 255 255 / 1);
-			}
-			
-			100%{
-				transform: translate(110vw, 85vh);
-			}
-		}
 		
 		/*----------------------- Conteudo do Site -----------------------*/
 		
@@ -217,12 +159,11 @@
 
 	<!--Adicionar estrela cadente e brilho de fundo-->
 	<div class="color-effect"></div>
-	<div class="shooting-star"></div>
 	
 	<!--Conteudo do site-->
 	<section class="site-content">
-		<h1 style="margin-bottom: 0;">Olá 👋</h1>
-		<h2 style="margin-bottom: 3rem;">É um prazer conhece-lo</h2>
+		<h1 style="margin-bottom: 0; position: relative;">Olá</h1>
+		<h2 style="margin-bottom: 3rem; font-size: 2rem;">Vamos <span style="color:yellow;">conversar?</span></h2>
 		
 		<!--Formulário de contacto-->
 		<form class="contact-form" action="https://formspree.io/f/xyzgvqlw" method="POST">
