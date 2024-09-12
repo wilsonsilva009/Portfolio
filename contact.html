@@ -23,7 +23,7 @@
 			margin: 0;
 			font-family: Comic-sans, Arial, Calibri, sans-serif;
 			transition: background-color 0.5s ease; /*transition: propriedade tempo estilo*/
-			background: linear-gradient(45deg, black, #08080a)
+			background: linear-gradient(45deg, black, #08080a);
 		}
 		
 		/*Aplicar estilos gerais aos tipos de texto*/
@@ -41,10 +41,38 @@
 		/*O brilho amarelo no fundo*/
 		.color-effect{
 			height: 10px;
+			opacity: 0;
 			position: absolute;
 			right: 50%;
 			box-shadow: 0 0 500px 80px rgba(255, 255, 0, 0.7);
 			z-index: -1;
+			animation: color-effect-anim 2s linear forwards 6.5s;
+		}
+
+		@keyframes color-effect-anim{
+			0%{
+				opacity: 0;
+			}
+
+			5%{
+				opacity: 1;
+			}
+
+			10%{
+				opacity: 0;
+			}
+
+			15%{
+				opacity: 1;
+			}
+
+			20%{
+				opacity: 0;
+			}
+
+			100%{
+				opacity: 1
+			}
 		}
 		
 		
@@ -56,6 +84,66 @@
 			align-items: center;
 			flex-direction: column;
 			margin: 1.5rem 2rem;
+		}
+
+		#typewrite1::before{
+			content: '';
+			background-color: #060608;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			animation: typewrite 1s forwards;
+		}
+
+		#typewrite2::before{
+			content: '';
+			background-color: #060607;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			animation: typewrite 1s forwards 3s;
+		}
+
+		#typewrite1{
+			animation: caret-blink .8s 3 1s;
+			padding-right: 10px;
+			border-right: rgba(255,255,255,0) solid 3px;
+		}
+
+		#typewrite2{
+			animation: caret-blink .8s 3 4s;
+			padding-right: 10px;
+			border-right: rgba(255,255,255,0) solid 3px;
+		}
+
+		@keyframes typewrite {
+			0%{
+				width: 100%;
+			}
+			
+			100%{
+				width: 0%;
+			}
+		}
+
+		@keyframes caret-blink {
+			0%{
+				border-right: rgba(255,255,255,0) solid 3px;
+			}
+
+			50%{
+				border-right: rgba(255,255,255,1) solid 3px;
+			}
+
+			100%{
+				border-right: rgba(255,255,255,0) solid 3px;
+			}
 		}
 		
 		/*----------------------- Form de Contacto -----------------------*/
@@ -69,7 +157,59 @@
 			padding: 2rem;
 			border: 2px groove white;
 			border-radius: 25px;
-			box-shadow: 10px 10px rgba(0,0,0,0.5);
+			background: linear-gradient(45deg, #040400 -21%, #08080a);
+		}
+
+		@property --y{
+			syntax: '<angle>';
+			inherits: false;
+			initial-value: 0deg;
+		}
+
+		@property --t{
+			syntax: '<angle>';
+			inherits: false;
+			initial-value: 0deg;
+		}
+
+		.contact-form::before{
+			
+
+			content: '';
+			position: absolute;
+			left: 50%;
+			bottom: 50%;
+			transform: translateX(-50%) translateY(50%);
+			width: 101.5%;
+			height: 101.5%;
+			border-radius: 25px;
+			z-index: -1;
+			background: conic-gradient(yellow var(--y), transparent var(--t));
+			box-shadow: 0px 0px 0px yellow;
+
+			animation: contact-bg-anim 4s ease-out 7.5s forwards, contact-bg-glow-anim 1s ease 11.5s forwards;
+		}
+
+		@keyframes contact-bg-glow-anim {
+			0%{
+				box-shadow: 0px 0px 0px yellow;
+			}
+
+			100%{
+				box-shadow: 0px 0px 10px yellow;
+			}
+		}
+
+		@keyframes contact-bg-anim {
+			0%{
+				--y: 0deg;
+				--t: 10deg;
+			}
+
+			100%{
+				--y: 360deg;
+				--t: 370deg;
+			}
 		}
 		
 		/*O pin decorativo*/
@@ -162,8 +302,8 @@
 	
 	<!--Conteudo do site-->
 	<section class="site-content">
-		<h1 style="margin-bottom: 0; position: relative;">Olá</h1>
-		<h2 style="margin-bottom: 3rem; font-size: 2rem;">Vamos <span style="color:yellow;">conversar?</span></h2>
+		<h1 id="typewrite1" style="margin-bottom: 0; position: relative;">Olá</h1>
+		<h2 id="typewrite2" style="margin-bottom: 3rem; font-size: 2rem; position: relative;">Vamos <span style="color:yellow;">conversar?</span></h2>
 		
 		<!--Formulário de contacto-->
 		<form class="contact-form" action="https://formspree.io/f/xyzgvqlw" method="POST">
