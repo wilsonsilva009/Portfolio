@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="pt-pt">
+
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+</head>
+
+
+<body>
+    <section class="form-bg">
+        <div id="form1">
+
+            <div class="switch-button">
+                <img src="Images/arrow.webp" width="50px" onclick="Switch()">
+            </div>
+
+            <form action="Test" method="post">
+
+
+                <label id="title">Login</label>
+
+                <div class="input-field">
+                    <label for="Name">Username</label>
+                    <input type="text" name="Name" title="Name">
+                </div>
+
+                <div class="input-field">
+                    <label for="Password">Password</label>
+                    <input type="password" name="Password" title="Password">
+                </div>
+
+                <div class="extras-field">
+                    <div style="display: flex;"><input type="checkbox" name="Remember" value="Remember me"><label>Remember me</label></div>
+                    <label><a href="">forgot your password?</a></label>
+                </div>
+
+                <div class="input-field" id="submit">
+                    <input type="submit" name="Submit" value="Login">
+                </div>
+                
+
+
+            </form>
+        </div>
+
+        <div id="form2">
+
+            <div class="switch-button">
+                <img src="Images/arrow.webp" width="50px" onclick="Switch()">
+            </div>
+
+            <form action="Test" method="post">
+
+
+                <label id="title">Register</label>
+
+                <div class="input-field">
+                    <label for="Name">Username</label>
+                    <input type="text" name="Name" title="Name">
+                </div>
+
+                <div class="input-field">
+                    <label for="Email">Email</label>
+                    <input type="email" name="Email" title="Email">
+                </div>
+
+                <div class="input-field">
+                    <label for="Password">Password</label>
+                    <input type="password" name="Password" title="Password">
+                </div>
+
+                <div class="extras-field">
+                    <div style="display: flex;"><input type="checkbox" name="Remember" value="Remember me"><label>Remember me</label></div>
+                    <label><a href="">already have an account?</a></label>
+                </div>
+
+                <div class="input-field" id="submit">
+                    <input type="submit" name="Submit" value="Register">
+                </div>
+                
+
+
+            </form>
+        </div>
+    </section>
+</body>
+
+
+</html>

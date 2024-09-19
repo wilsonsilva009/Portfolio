@@ -657,6 +657,14 @@ span::before{
 	}
 }
 
+@media only screen and (max-width: 1000px){
+	.habilidades{
+		flex-direction: column;
+        align-content: center;
+        flex-wrap: wrap;
+	}
+}
+
 @media only screen and (max-width: 600px) {
 	.info-box{
 		flex-direction: column;

@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			{ id: "windows", image: 'Images/windows.png', title: 'Windows', description: 'Teste5' },
 			{ id: "unity", image: 'Images/unity.png', title: 'Unity', description: 'Teste6' },
 			{ id: "godot", image: 'Images/godot.png', title: 'Godot', description: 'Teste7' },
-			{ id: "github", image: 'Images/github.png', title: 'Github', description: 'Teste8' },
+			{ id: "github", image: 'Images/github_black.png', title: 'Github', description: 'Teste8' },
 			{ id: "blender", image: 'Images/blender.png', title: 'Blender', description: 'Teste9' },
 			{ id: "photoshop", image: 'Images/photoshop.png', title: 'Photoshop', description: 'Teste10' },
 			{ id: "illustrator", image: 'Images/illustrator.png', title: 'Illustrator', description: 'Teste11' }
