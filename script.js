@@ -91,12 +91,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	function displayIconInfo(iconId) {
 		const icondescs = [
-			{ id: "wordpress", image: 'Images/wordpress.svg', title: 'Wordpress', description: 'Teste1' },
-			{ id: "apache", image: 'Images/apache.jpg', title: 'Apache', description: 'Teste2' },
-			{ id: "mysql", image: 'Images/mysql.png', title: 'MySQL', description: 'Teste3' },
-			{ id: "linux", image: 'Images/linux.png', title: 'Linux', description: 'Teste4' },	
-			{ id: "windows", image: 'Images/windows.png', title: 'Windows', description: 'Teste5' },
-			{ id: "unity", image: 'Images/unity.png', title: 'Unity', description: 'Teste6' },
+			{ id: "wordpress", image: 'Images/wordpress.svg', title: 'Wordpress', description: 'Já utilizei wordpress para criar e hospedar websites para empresas e clientes dessas empresas. Já criei e alterei temas de acordo com as necessidades da empresa.' },
+			{ id: "apache", image: 'Images/apache.jpg', title: 'Apache', description: 'Utilizo o apache quando preciso de testar coisas na máquina local sem enviar para a produção. Já hospedei e testei websites, bases de dados, etc.' },
+			{ id: "mysql", image: 'Images/mysql.png', title: 'MySQL', description: 'MySQL foi utilizado para as bases de dados dos vários websites e aplicações que criei quando necessitava de quardar dados.' },
+			{ id: "linux", image: 'Images/linux.png', title: 'Linux', description: 'Já utilizei Linux para hospedar vários tipos de serviços, nomeadamente websites, servidores dhcp, ou até criar dominios numa rede.' },	
+			{ id: "windows", image: 'Images/windows.png', title: 'Windows', description: 'O OS que uso desde o início da minha carreira. Já hospedei varios serviços com o Windows (e Windows Server).' },
+			{ id: "unity", image: 'Images/unity.png', title: 'Unity', description: 'Utilizei Unity para criar vários jogos 3D e 2D num ambiente de programação orientada a objetos.' },
 			{ id: "godot", image: 'Images/godot.png', title: 'Godot', description: 'Teste7' },
 			{ id: "github", image: 'Images/github_black.png', title: 'Github', description: 'Teste8' },
 			{ id: "blender", image: 'Images/blender.png', title: 'Blender', description: 'Teste9' },
