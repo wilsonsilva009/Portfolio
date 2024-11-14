@@ -675,6 +675,7 @@ span::before{
 	
 	.projetos {
 		grid-template-columns: 1fr;
+		margin-bottom: 50vh;
 	}
 	
 	.space-right{
