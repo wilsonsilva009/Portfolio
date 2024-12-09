@@ -202,7 +202,7 @@ header {
 }
 
 /*Alterar os vários estágios da página*/
-.stage0, .stage1, .stage2, .stage3{
+.stage0, .stage1, .stage2, .stage3, .stage4{
 	transition: transform 1s ease, opacity 1s ease;
 	color: white;
 	opacity: 0;
@@ -221,6 +221,17 @@ h1{
 	height: 100px;
 	position: absolute;
 	right: 100%;
+	box-shadow: 0 0 200px 50px rgba(255, 111, 0, 0.7);
+	z-index: -1;
+}
+
+/*Efeitos de luz no fundo alinhados ao centro*/
+.color-effect-center{
+	width: 200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
 	box-shadow: 0 0 200px 50px rgba(255, 111, 0, 0.7);
 	z-index: -1;
 }
@@ -260,17 +271,8 @@ span::before{
 }
 
 .info-box{
-	margin: 5rem 0 40rem 0;
+	margin: 5rem 0 20rem 0;
 }
-
-.info-box:not(.stage1, .stage5){
-	padding-top: 10rem;
-}
-
-.stage1,.stage5{
-	padding-top: 5rem;
-}
-
 
 .info-box > div, .info-box > p, .info-box > img, .space-right > p{
 	margin-left: 3%;
@@ -449,6 +451,15 @@ span::before{
 .projetos-item img{
 	width: 35%;
 }
+
+
+#display-text{
+	text-align: center;
+}
+
+
+
+
 
 /*Animation for the light of the sun and rocket and ufo*/
 #asteroid1, #asteroid2, #asteroid3{
