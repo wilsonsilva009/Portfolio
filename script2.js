@@ -34,8 +34,8 @@ for (let i = 0; i <= stages.length; i++){
 async function ChangeDisplayText() {
     const TheLine = document.querySelector("#display-text h1");
     var Lines = [
-        "Pronto para <span class='gradient-text'>Não sei poha</span> os seus clientes?",
-        "Pronto para <span class='gradient-text'>comer</span> a prima do João?",
+        "",
+        "",
     ]
 
     while (true) {
