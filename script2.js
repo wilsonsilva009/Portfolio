@@ -34,13 +34,13 @@ for (let i = 0; i <= stages.length; i++){
 async function ChangeDisplayText() {
     const TheLine = document.querySelector("#display-text h1");
     var Lines = [
-        "",
-        "",
+        "<h1>Pronto para <span class='gradient-text'>[texto]</span> os seus clientes?</h1>",
+        "<h1>Pronto para <span class='gradient-text'>[texto]</span> os seus clientes?</h1>",
     ]
 
     while (true) {
         var rng = Math.floor(Math.random() * Lines.length);
-        TheLine.innerHTML = Lines[rng];
+        //TheLine.innerHTML = Lines[rng];
         await new Promise(resolve => setTimeout(resolve, 1000));
     }
 }
